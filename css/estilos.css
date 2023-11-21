@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap");
+
+body {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    font-family: sans-serif;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* estilos barra de navegación */
+.navigation-bar {
+    overflow: hidden;
+    background: rgb(132, 88, 240);
+    background: linear-gradient(96deg, #8458f0 32%, #619b8a 64%, #008db1 100%);
+    font-weight: 400;
+}
+
+.navlist_der {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 2.5rem;
+}
+
+
+.navigation-bar a {
+    float: left;
+    display: block;
+    color: #eaeaea;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.navigation-bar a:hover {
+    background-color: #b3a0e2;
+    border-radius: 9%;
+}
+
+.navigation-bar a.active {
+    background-color: #eaeaea;
+    color: #807699;
+    border-radius: 8%;
+}
+
+.button {
+    font-family: "Montserrat", sans-serif;
+    color: #eaeaea;
+    background-color: #8459AF;
+    size: 30px;
+    padding: 8px;
+    border-radius: 50px;
+    border-color: #eaeaea;
+}
+
+
+.navigation-bar .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation-bar a:not(:first-child) {
+        display: none;
+    }
+
+    .navigation-bar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navigation-bar.responsive {
+        position: relative;
+    }
+
+    .navigation-bar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navigation-bar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+.title {
+    font-family: "Work Sans", sans-serif;
+    font-size: 80px;
+    margin-bottom: 0px
+}
+
+.h2 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.verde {
+    background-color: #619b8a;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: auto;
+}
+
+.subtitulo {
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.h3 {
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 200;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card {
+    width: 350px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+    width: 330px;
+}
+
+.container .card h4 {
+    font-weight: 600;
+    margin: 8px auto;
+}
+
+.container .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 8px auto;
+}
+
+.container .card .boton {
+    font-family: "Montserrat", sans-serif;
+    color: #eaeaea;
+    background-color: #8459AF;
+    size: 30px;
+    padding: 8px;
+    border-radius: 50px;
+    border-color: #eaeaea;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.presentacion_bg {
+    padding: 1px;
+    background-image: url(../img/holaa2.jpg);
+    min-height: 100vh;
+    background-color: #b3a0e2;
+    background-position: center center;
+    background-size: cover;
+}
+
+.presentacion_bg .presentacion_txt {
+    margin: auto;
+    max-width: 70rem;
+}
+
+.presentacion_bg .h1 {
+    text-align: left;
+}
+
+.presentacion_bg .subtexto {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 21rem;
+    font-weight: 400;
+}
+
+.footer {
+    background: rgb(132, 88, 240);
+    background: linear-gradient(96deg, #8458f0 32%, #619b8a 64%, #008db1 100%);
+    color: rgba(255, 255, 255, 0.6431372549);
+    padding-top: 30px;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer .info .logo_footer {
+    width: 13rem;
+}
+
+.footer .info ul {
+    padding-left: 0;
+}
+
+.footer .info ul li {
+    list-style: none;
+}
+
+.footer .categorias .nav_footer ul {
+    padding-left: 0;
+}
+
+.footer .categorias .nav_footer ul li {
+    list-style: none;
+}
+
+.footer .categorias .nav_footer ul li a {
+    color: rgba(255, 255, 255, 0.6431372549);
+    text-decoration: none;
+}
+
+.footer .obras_sociales img {
+    width: 250px;
+}
+
+.footer .redes_sociales .iconos_rs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer .redes_sociales .iconos_rs a {
+    color: #eaeaea;
+    list-style: none;
+    text-decoration: none;
+}
