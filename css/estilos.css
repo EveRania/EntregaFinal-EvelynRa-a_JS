@@ -53,7 +53,7 @@ body {
     font-family: "Montserrat", sans-serif;
     color: #eaeaea;
     background-color: #8459AF;
-    size: 30px;
+    size: 35px;
     padding: 8px;
     border-radius: 50px;
     border-color: #eaeaea;
@@ -96,7 +96,7 @@ body {
 .title {
     font-family: "Work Sans", sans-serif;
     font-size: 80px;
-    margin-bottom: 0px
+    margin: 2px
 }
 
 .h2 {
@@ -194,7 +194,7 @@ body {
 .presentacion_bg {
     padding: 1px;
     background-image: url(../img/holaa2.jpg);
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: #b3a0e2;
     background-position: center center;
     background-size: cover;
