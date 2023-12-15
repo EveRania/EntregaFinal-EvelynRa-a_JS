@@ -64,7 +64,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
     .navigation-bar a:not(:first-child) {
         display: none;
     }
@@ -75,7 +75,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 920px) {
     .navigation-bar.responsive {
         position: relative;
     }
@@ -91,6 +91,17 @@ body {
         display: block;
         text-align: left;
     }
+}
+
+.count-products {
+    color: #eaeaea;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .title {
@@ -267,4 +278,152 @@ body {
     color: #eaeaea;
     list-style: none;
     text-decoration: none;
+}
+
+
+
+/* estilos de ventana Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 50px auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 600px;
+    max-height: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #eaeae;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgb(97, 155, 138);
+    color: #eaeaea;
+    font-family: "Montserrat", sans-serif;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    background-color: #ccc;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(97, 155, 138);
+    color: #eaeaea;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor-producto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 130;
+    background-color: #ffffff;
+    margin: 5px 0;
+}
+
+.eliminar-producto {
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+    border-radius: 50%;
+    padding: 3px;
+    color: red;
+    transition: 0.5s;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+}
+
+.eliminar-producto:hover {
+    color: white;
+    background-color: red;
+}
+
+.boton-carrito {
+    text-decoration: none;
+    background-color: #20798fa1;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    size: 35px;
+    padding: 8px;
+    border-radius: 50px;
+    color: #eaeaea;
+
+}
+
+.boton-carrito:hover {
+    background-color: white;
+    color: black;
+}
+
+.boton-standar {
+    margin-bottom: 12px;
 }

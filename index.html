@@ -14,21 +14,28 @@
 
 <body>
     <div class="navigation-bar" id="navigation-bar">
-        
-            <a href="index.html"> <img class="header_logo" src="./img/logo_sin_fondo.png"
-                    alt="Agustin Raña Kinesiologia" width="300rem"></a>
-       
+
+        <a href="index.html"> <img class="header_logo" src="./img/logo_sin_fondo.png" alt="Agustin Raña Kinesiologia"
+                width="300rem"></a>
+
         <div class="navlist_der">
-            <a href="./index.html" class="active">INICIO</a>
+            <a href="./index.html">INICIO</a>
             <a href="#sobremi">SOBRE MI</a>
             <a href="#servicios">SERVICIOS</a>
             <a href="#inscripcion"><button class="button">INSCRIPCIÓN ONLINE</button></a>
-            <a href="#about"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            <a href="javascript:void(0);" id="icon-menu" class="icon">
-                <i class="fa fa-bars"></i>
+            <a href="#cart" id="carrito">
+                <div class="contenedor-carrito">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div id="productos-carrito" class="count-products">0</div>
+                </div>
             </a>
         </div>
+
+        <a href="javascript:void(0);" id="icon-menu" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
+    
     <section class=" presentacion_bg">
         <div class="presentacion_txt">
             <h1 class="title">Agustin Raña</h1>
@@ -47,6 +54,22 @@
     <h2 class="subtitulo">ELEGÍ TU PLAN DE ENTRENAMIENTO</h2>
     <h3 class="h3">Hacé pilates con nosotros eligiendo un plan a precio promocional con tu inscripcion online</h3>
 
+    <!-- The Modal -->
+    <div id="ventana-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Carrito de compras</h2>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <h3 id="total"></h3>
+                <a id="finalizar-compra" class="boton-carrito" href="#">finalizar</a>
+                <a id="vaciar-carrito" class="boton-carrito" href="#">vaciar</a>
+            </div>
+        </div>
+    </div>
 
     <div id="container-products" class="container">
 
@@ -57,7 +80,7 @@
     <footer class="footer">
         <!-- Columna info contacto -->
         <section class="info">
-            <img class="logo_footer" src="./img/logo_sin_fondo.png" alt="Logo Agustin Raña Kinesiologia"></a>
+            <img class="logo_footer" src="./img/logo_sin_fondo.png" alt="Logo Agustin Raña Kinesiologia">
             <nav>
                 <ul>
                     <li>Av. Siempreviva 742, Rosario (Arg)</li>
@@ -107,6 +130,7 @@
             </div>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
     <script src="./js/productos.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://kit.fontawesome.com/3086fa92c7.js" crossorigin="anonymous"></script>
