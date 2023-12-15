@@ -145,7 +145,7 @@ function limpiarCarrito() {
             Swal.fire({
                 title: 'Operación cancelada',
                 icon: 'info',
-                text: 'La operación de vaciar el carrito de compras fue cancelada',
+                text: '¡La operación de vaciar el carrito de compras fue cancelada!',
                 timerProgressBar: true,
                 timer: 5000,
             });
