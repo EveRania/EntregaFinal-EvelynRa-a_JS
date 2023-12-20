@@ -175,7 +175,7 @@ body {
 }
 
 .container .card img {
-    width: 330px;
+    height: 43%;
 }
 
 .container .card h4 {
@@ -281,8 +281,6 @@ body {
     list-style: none;
     text-decoration: none;
 }
-
-
 
 /* ventana modal */
 .modal {
