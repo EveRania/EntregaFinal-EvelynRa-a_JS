@@ -99,7 +99,7 @@ function agregarProducto(e) {
     e.preventDefault();
     if (e.target.classList.contains('agregar-carrito')) {
         const productoAgregado = e.target.parentElement;
-        alertProducto('success', 'producto agregado', '#619b8a');
+        alertProducto('success', 'Producto agregado', '#619b8a');
         leerDatosProducto(productoAgregado);
     }
 }
