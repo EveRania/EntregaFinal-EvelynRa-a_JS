@@ -104,6 +104,7 @@ body {
     border-radius: 50%;
 }
 
+/* main */
 .title {
     font-family: "Work Sans", sans-serif;
     font-size: 80px;
@@ -228,6 +229,7 @@ body {
     font-weight: 400;
 }
 
+/* footer */
 .footer {
     background: rgb(132, 88, 240);
     background: linear-gradient(96deg, #8458f0 32%, #619b8a 64%, #008db1 100%);
@@ -282,7 +284,7 @@ body {
 
 
 
-/* estilos de ventana Modal */
+/* ventana modal */
 .modal {
     display: none;
     position: fixed;
