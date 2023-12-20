@@ -1,4 +1,4 @@
-const file = '../data/productos.json';
+// const file = '../data/productos.json';
 const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
