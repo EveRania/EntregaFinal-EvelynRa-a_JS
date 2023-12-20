@@ -1,3 +1,5 @@
+const url = 'https://raw.githubusercontent.com/EveRania/JSON/main/pilates.json';
+const file = '../data/productos.json';
 const containerProducts = document.getElementById('container-products');
 const modal = document.getElementById('ventana-modal');
 const carrito = document.getElementById('carrito');
@@ -39,65 +41,41 @@ class Producto {
     }
 }
 
-const renderizarProductos = () => {
-    productos.forEach((producto) => {
-        const divCard = document.createElement('div');
-        divCard.classList.add('card');
-        divCard.innerHTML = `
-                                <img src="./img/${producto.img}" alt="${producto.nombre}" />
-                                <h4>${producto.nombre}</h4>
-                                <h5>$${producto.precio}</h5>
-                                <p>${producto.descripcion}</p>
-                                <a id="${producto.id}" class="boton agregar-carrito" href="#">Nueva suscripción</a>
-                                <h6>${producto.aclaracion}</h6>
-                            `;
-
-        containerProducts.appendChild(divCard);
-    });
-};
-
-renderizarProductos();
-
 cargarEventos();
 
 function cargarEventos() {
     iconMenu.addEventListener('click', showMenu);
 
     document.addEventListener('DOMContentLoaded', () => {
+        renderizarProductos();
+        // productosCarrito = JSON.parse(localStorage.getItem('productosLS')) || [];
         cargarCarritoLocalStorage();
         mostrarProductosCarrito();
     });
 
-    containerProducts.addEventListener('click', agregarProducto);
-
-    containerCart.addEventListener('click', eliminarProducto);
-
-    finalizarCompra.addEventListener('click', compraFinalizada);
-
+    containerProducts.addEventListener('click', agregarProducto);    
+    containerCart.addEventListener('click', eliminarProducto);    
+    finalizarCompra.addEventListener('click', compraFinalizada);    
     vaciarCarrito.addEventListener('click', limpiarCarrito);
-
+    
     carrito.onclick = function () {
         modal.style.display = 'block';
     };
-
+    
     btnClose.onclick = function () {
         ocultarModal();
     };
-
+    
     window.onclick = function (event) {
         if (event.target == modal) {
             ocultarModal();
         }
     };
+
 }
 
-function eliminarProducto(e) {
-    if (e.target.classList.contains('eliminar-producto')) {
-        const productoId = parseInt(e.target.getAttribute('id'));
-        productosCarrito = productosCarrito.filter((producto) => producto.id !== productoId);
-        guardarProductosLocalStorage();
-        mostrarProductosCarrito();
-    }
+function ocultarModal() {
+    modal.style.display = 'none';
 }
 
 function cargarCarritoLocalStorage() {
@@ -157,14 +135,30 @@ function eliminarCarritoLS() {
     localStorage.removeItem('productosLS');
 }
 
-
+function eliminarProducto(e) {
+    if (e.target.classList.contains('eliminar-producto')) {
+        const productoId = parseInt(e.target.getAttribute('id'));
+        productosCarrito = productosCarrito.filter((producto) => producto.id !== productoId);
+        guardarProductosLocalStorage();
+        mostrarProductosCarrito();
+    }
+}
 
 function agregarProducto(e) {
     e.preventDefault();
     if (e.target.classList.contains('agregar-carrito')) {
         const productoAgregado = e.target.parentElement;
+        alertProducto('success', 'producto agregado', '#619b8a');
         leerDatosProducto(productoAgregado);
     }
+}
+
+function alertProducto(icono, titulo, colorFondo) {
+    Toast.fire({
+        icon: icono, 
+        title: titulo, 
+        background: colorFondo, 
+    });
 }
 
 function leerDatosProducto(producto) {
@@ -205,39 +199,28 @@ function agregarAlCarrito(productoAgregar) {
     mostrarProductosCarrito();
 }
 
-function guardarProductosLocalStorage() {
-    localStorage.setItem('productosLS', JSON.stringify(productosCarrito));
-}
-
 function mostrarProductosCarrito() {
     limpiarHTML();
 
     productosCarrito.forEach((producto) => {
-
         const { imagen, nombre, precio, cantidad, subtotal, id } = producto;
 
         const div = document.createElement('div');
         div.classList.add('contenedor-producto');
         div.innerHTML = `
-    <img src="${imagen}" width="100">
-    <p>${nombre}</p>
-    <p>$${precio}</p>
-    <p>${cantidad}</p>
-    <p>$${subtotal}</p>
-    <a href="#" class= "eliminar-producto" id="${id}"> X </a>
-    `;
+             <img src="${imagen}" width="100">
+            <p>${nombre}</p>
+            <p>$${precio}</p>
+            <p>${cantidad}</p>
+            <p>$${subtotal}</p>
+            <a href="#" class= "eliminar-producto" id="${id}"> X </a>
+         `;
 
         containerCart.appendChild(div);
     });
 
     mostrarCantidadProductos();
     calcularTotal();
-}
-
-function calcularTotal() {
-    let total = productosCarrito.reduce((sumaTotal, producto) => sumaTotal + producto.subtotal, 0);
-
-    totalCarrito.innerHTML = `Total a pagar $  ${total}`;
 }
 
 function mostrarCantidadProductos() {
@@ -255,16 +238,57 @@ function mostrarCantidadProductos() {
     }
 }
 
+function calcularTotal() {
+    let total = productosCarrito.reduce((sumaTotal, producto) => sumaTotal + producto.subtotal, 0);
+
+    totalCarrito.innerHTML = `Total a pagar $ ${total}`;
+}
+
 function limpiarHTML() {
     while (containerCart.firstChild) {
         containerCart.removeChild(containerCart.firstChild);
     }
 }
 
-
-function ocultarModal() {
-    modal.style.display = 'none';
+function guardarProductosLocalStorage() {
+    localStorage.setItem('productosLS', JSON.stringify(productosCarrito));
 }
+
+async function realizarPeticion(datos) {
+    try {
+        const response = await fetch(datos);
+        if (!response.ok) {
+            throw new Error(`Error en la petición: ${response.status} ${response.statusText}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    } finally {
+    }
+}
+
+async function renderizarProductos() {
+    const productos = await realizarPeticion(file);
+    recorrerArray(productos);
+}
+
+function recorrerArray(arregloProductos) {
+    arregloProductos.forEach((producto) => {
+        const divCard = document.createElement('div');
+        divCard.classList.add('card');
+        divCard.innerHTML = `
+                                <img src="./img/${producto.img}" alt="${producto.nombre}" />
+                                <h4>${producto.nombre}</h4>
+                                <h5>$${producto.precio}</h5>
+                                <p>${producto.descripcion}</p>
+                                <a id="${producto.id}" class="boton agregar-carrito" href="#">Nueva suscripción</a>
+                                <h6>${producto.aclaracion}</h6>
+                            `;
+
+        containerProducts.appendChild(divCard);
+    });
+};
 
 function showMenu() {
     let navBar = document.getElementById('navigation-bar');
