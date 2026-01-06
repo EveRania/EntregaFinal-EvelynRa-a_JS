@@ -1,21 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap");
 
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Work Sans", sans-serif;
+
+    --color-white: #eaeaea;
+    --color-black: #000;
+    --color-text-light: rgba(255, 255, 255, 0.64);
+
+    --violet-main: #8458f0;
+    --violet-soft: #b3a0e2;
+    --violet-button: #8459AF;
+    --violet-active: #807699;
+
+    --green-main: #619b8a;
+
+    --radius-small: 8px;
+    --radius-round: 50px;
+}
+
+/* =========================
+   BASE
+========================= */
+
 body {
     width: 100%;
     margin: auto;
     padding: 0;
-    font-family: sans-serif;
+    font-family: var(--font-primary);
     letter-spacing: 0.03em;
     line-height: 1.6;
-    font-family: "Montserrat", sans-serif;
 }
 
-/* estilos barra de navegación */
+/* =========================
+   NAVBAR
+========================= */
+
 .navigation-bar {
     overflow: hidden;
-    background: rgb(132, 88, 240);
-    background: linear-gradient(96deg, #8458f0 32%, #619b8a 64%, #008db1 100%);
+    background: linear-gradient(96deg,
+            var(--violet-main) 32%,
+            var(--green-main) 64%,
+            #008db1 100%);
     font-weight: 400;
 }
 
@@ -23,46 +54,55 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: baseline;
-    padding: 2.5rem;
+    /* padding: 2.5rem;
+    padding-bottom: 1rem; */
+    padding-top: 1.2rem;
 }
-
 
 .navigation-bar a {
     float: left;
     display: block;
-    color: #eaeaea;
+    color: var(--color-white);
     text-align: center;
     text-decoration: none;
     font-size: 17px;
-    padding-right: 16px;
-    padding-left: 16px;
+    padding: 0 17px;
+    /* width: 300px; */
 }
 
 .navigation-bar a:hover {
-    background-color: #b3a0e2;
+    background-color: var(--violet-soft);
     border-radius: 9%;
 }
 
 .navigation-bar a.active {
-    background-color: #eaeaea;
-    color: #807699;
-    border-radius: 8%;
+    background-color: var(--color-white);
+    color: var(--violet-active);
+    border-radius: var(--radius-small);
 }
+
+.navigation-bar img {
+    max-width: 12rem;
+}
+
 
 .button {
-    font-family: "Montserrat", sans-serif;
-    color: #eaeaea;
-    background-color: #8459AF;
-    size: 35px;
+    font-family: var(--font-primary);
+    color: var(--color-white);
+    background-color: var(--violet-button);
     padding: 8px;
-    border-radius: 50px;
-    border-color: #eaeaea;
+    border-radius: var(--radius-round);
+    border-color: var(--color-white);
+    margin-bottom: 7px;
 }
-
 
 .navigation-bar .icon {
     display: none;
 }
+
+/* =========================
+   RESPONSIVE NAV
+========================= */
 
 @media screen and (max-width: 920px) {
     .navigation-bar a:not(:first-child) {
@@ -93,61 +133,52 @@ body {
     }
 }
 
-.count-products {
-    color: #eaeaea;
-    width: 25px;
-    height: 25px;
-    margin-left: 5px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+/* =========================
+   TITULOS Y TEXTOS
+========================= */
+
+h1 {
+    font-family: var(--font-primary);
+    font-size: 62px;
+    margin: 2px;
 }
 
-/* main */
-.title {
-    font-family: "Work Sans", sans-serif;
-    font-size: 80px;
-    margin: 2px
-}
-
-.h2 {
-    font-family: "Work Sans", sans-serif;
+h2 {
+    font-family: var(--font-secondary);
     font-size: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     text-align: left;
     max-width: 70rem;
     margin: auto;
 }
 
-.verde {
-    background-color: #619b8a;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
+h3 {
     text-align: center;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     margin: auto;
+    font-size: 25px;
+    padding: 10px 0;
+    font-weight: 200;
 }
 
 .subtitulo {
     text-align: center;
     margin: auto;
     font-size: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
 }
 
-.h3 {
+.verde {
+    background-color: var(--green-main);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 20px;
     text-align: center;
-    margin: auto;
-    font-size: 25px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: 200;
+    padding: 1.5rem 0;
 }
+
+/* =========================
+   CARDS
+========================= */
 
 .container {
     width: 100%;
@@ -161,7 +192,7 @@ body {
 .container .card {
     width: 350px;
     height: 500px;
-    border-radius: 8px;
+    border-radius: var(--radius-small);
     box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     margin: 20px;
@@ -175,7 +206,7 @@ body {
 }
 
 .container .card img {
-    height: 43%;
+    width: 330px;
 }
 
 .container .card h4 {
@@ -191,23 +222,26 @@ body {
 }
 
 .container .card .boton {
-    font-family: "Montserrat", sans-serif;
-    color: #eaeaea;
-    background-color: #8459AF;
-    size: 30px;
+    font-family: var(--font-primary);
+    color: var(--color-white);
+    background-color: var(--violet-button);
     padding: 8px;
-    border-radius: 50px;
-    border-color: #eaeaea;
+    border-radius: var(--radius-round);
+    border-color: var(--color-white);
     text-decoration: none;
     transition-duration: 0.4s;
     cursor: pointer;
 }
 
+/* =========================
+   PRESENTACION
+========================= */
+
 .presentacion_bg {
     padding: 1px;
     background-image: url(../img/holaa2.jpg);
     min-height: 80vh;
-    background-color: #b3a0e2;
+    background-color: var(--violet-soft);
     background-position: center center;
     background-size: cover;
 }
@@ -217,213 +251,83 @@ body {
     max-width: 70rem;
 }
 
-.presentacion_bg .h1 {
-    text-align: left;
-}
-
 .presentacion_bg .subtexto {
     text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     max-width: 21rem;
     font-weight: 400;
 }
 
-/* footer */
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
-    background: rgb(132, 88, 240);
-    background: linear-gradient(96deg, #8458f0 32%, #619b8a 64%, #008db1 100%);
-    color: rgba(255, 255, 255, 0.6431372549);
-    padding-top: 30px;
+    background: linear-gradient(96deg,
+            var(--violet-main) 32%,
+            var(--green-main) 64%,
+            #008db1 100%);
+    color: var(--color-text-light);
+    /* padding-top: 30px; */
     display: flex;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-primary);
     justify-content: space-evenly;
     text-align: center;
     font-size: 15px;
 }
 
 .footer .info .logo_footer {
-    width: 13rem;
+    width: 9rem;
 }
 
-.footer .info ul {
+.footer ul {
     padding-left: 0;
 }
 
-.footer .info ul li {
+.footer ul li {
     list-style: none;
 }
 
-.footer .categorias .nav_footer ul {
-    padding-left: 0;
-}
-
-.footer .categorias .nav_footer ul li {
-    list-style: none;
-}
-
-.footer .categorias .nav_footer ul li a {
-    color: rgba(255, 255, 255, 0.6431372549);
+.footer a {
+    color: var(--color-text-light);
     text-decoration: none;
 }
 
-.footer .obras_sociales img {
-    width: 250px;
+.footer .obras_sociales .img_os {
+    max-width: 40%;
 }
 
-.footer .redes_sociales .iconos_rs {
-    display: flex;
-    justify-content: space-evenly;
-}
+/* =========================
+   MODAL
+========================= */
 
-.footer .redes_sociales .iconos_rs a {
-    color: #eaeaea;
-    list-style: none;
-    text-decoration: none;
-}
-
-/* ventana modal */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    position: relative;
     background-color: #fefefe;
     margin: 50px auto;
-    padding: 0;
-    border: 1px solid #888;
     width: 600px;
     max-height: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0;
-    }
-
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0;
-    }
-
-    to {
-        top: 0;
-        opacity: 1;
-    }
-}
-
-.close {
-    color: #eaeaea;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-header {
-    padding: 2px 16px;
-    background-color: rgb(97, 155, 138);
-    color: #eaeaea;
-    font-family: "Montserrat", sans-serif;
-}
-
-.modal-body {
-    padding: 2px 16px;
-    background-color: #ffffff;
-    overflow-y: auto;
-}
-
-.modal-footer {
-    padding: 2px 16px;
-    background-color: rgb(97, 155, 138);
-    color: #eaeaea;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contenedor-producto {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 130;
-    background-color: #ffffff;
-    margin: 5px 0;
-}
-
-.eliminar-producto {
-    text-decoration: none;
-    border-style: solid;
-    border-width: 2px;
-    border-color: red;
-    border-radius: 50%;
-    padding: 3px;
-    color: red;
-    transition: 0.5s;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10px;
-    height: 10px;
-}
-
-.eliminar-producto:hover {
-    color: white;
-    background-color: red;
-}
+/* =========================
+   BOTONES VARIOS
+========================= */
 
 .boton-carrito {
-    text-decoration: none;
     background-color: #20798fa1;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;
-    size: 35px;
     padding: 8px;
-    border-radius: 50px;
-    color: #eaeaea;
-
+    border-radius: var(--radius-round);
+    color: var(--color-white);
 }
 
 .boton-carrito:hover {
     background-color: white;
     color: black;
-}
-
-.boton-standar {
-    margin-bottom: 12px;
 }
