@@ -327,10 +327,6 @@ li {
 }
 
 
-.info_sobre_mi {
-    /* display: flex; */
-}
-
 .ofrezco {
     display: flex;
     justify-content: space-around;
@@ -347,6 +343,23 @@ li {
 
 .p_ofrezco {
     max-width: 60%;
+}
+
+
+/* SERVICIOS */
+
+main .kinesiologia {
+    margin: auto;
+    max-width: 75%;
+    padding: 3rem 0 3rem 0;
+}
+
+main .kinesiologia .img_servicios {
+    width: 400px;
+}
+
+main .kinesiologia .p_serv {
+    padding-left: 10px;
 }
 
 

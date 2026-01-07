@@ -8,6 +8,9 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="shortcut icon" href="./img/logo_favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/estilos.css" />
     <title>Agustin Raña Kinesiologia</title>
 </head>
@@ -40,131 +43,135 @@
 
     <!-- Servicios -->
     <main>
-        <h1>SERVICIOS</h1>
+        <h2>SERVICIOS</h2>
         <h2 class="verde">Mucho mas que tu kinesiólogo. ¡Esto te va a encantar!</h2>
 
         <!-- Grilla Servicios -->
-        <section class="kinesiologia">
-            <!-- Tratamiento kinesico -->
-            <div class="clearfix">
-                <img src="../img/kinesio_1.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 img_servicios"
-                    alt="imagen de kinesiologia">
+        <section class="kinesiologia container">
 
-                <h2 class="titulo_serv" id="kinesio">TRATAMIENTO KINESICO</h2>
-
-                <div class="p_serv">
-                    <p>
-                        La kinesiología estudia el movimiento corporal y concretamente la reacción muscular ante un
-                        factor estresante o de sobrecarga.</p>
-                    <p>
-                        Esta terapia se basa en la rehabilitación funcional para la prevención, tratamiento y
-                        recuperación de aquellas lesiones o patologías que afecten la movilidad o la funcionalidad del
-                        sistema esquelético y muscular. Todos los tratamientos son personalizados y a la medida que cada
-                        paciente.
-                    </p>
-                    <p>
-                        Como profesional de la salud, destino un tiempo prolongado en la atención de cada paciente,
-                        logrando una correcta evaluación, diagnóstico y un posterior plan de tratamiento adecuado a cada
-                        caso en particular.
-                    </p>
+            <!-- Servicio 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <img src="../img/kinesio_1.jpg" class="img-fluid img_servicios" alt="imagen de kinesiologia">
                 </div>
 
-                <a href="turnos.html"> <button>PEDIR UN TURNO</button></a>
+                <div class="col-md-6">
+                    <h2 class="titulo_serv" id="kinesio">TRATAMIENTO KINESICO</h2>
 
+                    <div class="p_serv">
+                        <p>
+                            La kinesiología estudia el movimiento corporal y concretamente la reacción muscular
+                            ante un factor estresante o de sobrecarga.
+                        </p>
+                        <p>
+                            Esta terapia se basa en la rehabilitación funcional para la prevención, tratamiento y
+                            recuperación de aquellas lesiones o patologías que afecten la movilidad o la
+                            funcionalidad del sistema esquelético y muscular.
+                        </p>
+                        <p>
+                            Como profesional de la salud, destino un tiempo prolongado en la atención de cada
+                            paciente, logrando una correcta evaluación, diagnóstico y un posterior plan de
+                            tratamiento adecuado a cada caso en particular.
+                        </p>
+                    </div>
+
+                    <a href="turnos.html">
+                        <button class="btn btn-primary">PEDIR UN TURNO</button>
+                    </a>
+                </div>
             </div>
 
-            <!-- Pilates -->
-            <div class="clearfix">
+            <!-- Servicio 2 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse">
+                <div class="col-md-6">
+                    <img src="../img/pilates.jpg" class="img-fluid img_servicios" alt="imagen de pilates">
+                </div>
 
-                <img src="../img/pilates.jpg" class="img_servicios" alt="imagen de pilates">
-                <div class="col-md-7 float-md-end mb-3 ms-md-3 pilates">
+                <div class="col-md-6">
                     <h2 class="titulo_serv" id="pilates">PILATES</h2>
+
                     <div class="p_serv">
-                        <p>El Método Pilates, fue creado para mejorar la movilidad del cuerpo de forma consciente, con
-                            total control del movimiento en todo su recorrido, desarrollando conciencia corporal. Nos
-                            permite saber
-                            en qué parte del movimiento nos falta control y a poder ir mejorando a través de los
-                            ejercicios Pilates ganando en calidad de vida al desaparecer
-                            los dolores limitantes que anteriormente nos aquejaban.
+                        <p>
+                            El Método Pilates fue creado para mejorar la movilidad del cuerpo de forma consciente,
+                            con total control del movimiento en todo su recorrido, desarrollando conciencia
+                            corporal.
                         </p>
                         <p>
-                            Las clases de pilates se adaptan bien a tus necesidades. Contamos con un centro idóneo donde
-                            se enseña correctamente el metodo y es llevado por instructores certificados.
+                            Las clases de pilates se adaptan a tus necesidades y son dictadas por instructores
+                            certificados en un centro totalmente equipado.
                         </p>
                         <p>
-                            Nuestro estudio Pilates es completo, esta equipado con Cadillac, Barril Alto, Barril
-                            Pequeño, Reformers, Sillas y una variedad de accesorios a mano.
+                            Nuestro estudio cuenta con Cadillac, Barril Alto, Barril Pequeño, Reformers, Sillas y
+                            accesorios variados.
                         </p>
-                        <a href="turnos.html"><button>PEDIR UN TURNO</button></a>
                     </div>
+
+                    <a href="turnos.html">
+                        <button class="btn btn-primary">PEDIR UN TURNO</button>
+                    </a>
                 </div>
             </div>
 
-            <!-- Fisioterapia y rehabilitacion -->
-            <div class="clearfix">
-                <img src="../img/rehabilitacion.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 img_servicios"
-                    alt="imagen de fisioterapia">
-
-                <h2 class="titulo_serv" id="fisioterapia">FISIOTERAPIA Y REHABILITACION</h2>
-
-                <div class="p_serv">
-                    <p>
-                        La Fisioterapia incluye la ejecución de pruebas eléctricas y manuales para determinar el valor
-                        de la afectación y fuerza muscular, pruebas para determinar las capacidades funcionales, la
-                        amplitud del movimiento articular y medidas de la capacidad vital, así como ayudas diagnósticas
-                        para el control de la evolución.
-
-                    </p>
-                    <p>
-                        Contamos con las mejores instalaciones y equipos. Cada uno de los gabinetes está acondicionado
-                        para brindarte el mejor tratamiento. Además contamos con 2 gimnasios para adultos y uno para
-                        pediatría incluyendo telas, juegos y una jaula para poder realizar todo tipo de ejercicios y
-                        terapias con los nenes.
-                    </p>
-                    <p>
-                        Creamos un espacio agradable y confortable para la comodidad del paciente, ampliando la zona de
-                        atención en la ciudad.
-                    </p>
+            <!-- Servicio 3 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-6">
+                    <img src="../img/rehabilitacion.jpg" class="img-fluid img_servicios" alt="imagen de fisioterapia">
                 </div>
 
-                <a href="turnos.html"> <button>PEDIR UN TURNO</button></a>
+                <div class="col-md-6">
+                    <h2 class="titulo_serv" id="fisioterapia">FISIOTERAPIA Y REHABILITACION</h2>
 
+                    <div class="p_serv">
+                        <p>
+                            La Fisioterapia incluye pruebas eléctricas y manuales para determinar la fuerza
+                            muscular y la amplitud del movimiento articular.
+                        </p>
+                        <p>
+                            Contamos con gabinetes equipados y gimnasios para adultos y pediatría, preparados
+                            para brindar la mejor atención.
+                        </p>
+                        <p>
+                            Creamos un espacio agradable y confortable para la comodidad del paciente.
+                        </p>
+                    </div>
+
+                    <a href="turnos.html">
+                        <button class="btn btn-primary">PEDIR UN TURNO</button>
+                    </a>
+                </div>
             </div>
 
-            <!-- Drenaje linfatico -->
-            <div class="clearfix">
+            <!-- Servicio 4 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse">
+                <div class="col-md-6">
+                    <img src="../img/masajes.jpg" class="img-fluid img_servicios" alt="imagen de drenaje linfatico">
+                </div>
 
-                <img src="../img/masajes.jpg" class="img_servicios" alt="imagen de pilates">
-                <div class="col-md-7 float-md-end mb-3 ms-md-3 pilates">
+                <div class="col-md-6">
                     <h2 class="titulo_serv" id="drenaje_linfatico">DRENAJE LINFATICO MANUAL</h2>
+
                     <div class="p_serv">
-                        <p>Es un masaje muy efectivo que se utiliza para combatir determinados problemas de salud y
-                            también en el campo de la estética. Es una técnica en la cual todas las maniobras se
-                            realizan con movilizaciones suaves lentas y progresivas.
+                        <p>
+                            Es un masaje efectivo que utiliza maniobras suaves, lentas y progresivas para tratar
+                            diversas patologías.
                         </p>
                         <p>
-                            El Masaje Linfático es especialmente indicado en personas que padecen cefaleas y migrañas;
-                            edemas en piernas, tobillo y pies y edemas por quemaduras, entre otras afecciones.
-                        </p>
-
-                        <p>
-                            El drenaje linfático es una herramienta muy importante a la hora de tratar cualquier tipo de
-                            patología.
-
-                            Se realiza en camilla y una sesión durará entre 30-50 minutos.
-
+                            Está especialmente indicado para personas con cefaleas, edemas, migrañas y problemas
+                            circulatorios.
                         </p>
                         <p>
-                            En cuanto a la estetica, Una de las aplicaciones más conocida del drenaje es el tratamiento
-                            en problemas de celulitis, exceso de grasas, malos hábitos en la alimentación, hacer poco
-                            ejercicio, tensión emocional, mala circulación.
+                            Se realiza en camilla, con sesiones de entre 30 y 50 minutos.
                         </p>
-                        <a href="turnos.html"><button>PEDIR UN TURNO</button></a>
                     </div>
+
+                    <a href="turnos.html">
+                        <button class="btn btn-primary">PEDIR UN TURNO</button>
+                    </a>
                 </div>
             </div>
 
         </section>
+
     </main>
 
 
