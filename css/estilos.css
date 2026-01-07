@@ -175,6 +175,10 @@ h3 {
     font-weight: 200;
 }
 
+p {
+    font-size: 15px;
+}
+
 a {
     text-decoration: none;
 }
@@ -322,6 +326,28 @@ li {
     text-align: center;
 }
 
+
+.info_sobre_mi {
+    /* display: flex; */
+}
+
+.ofrezco {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.que_te_ofrezco {
+    background-color: var(--violet-active);
+    /* position: absolute; */
+    padding: 5rem 2rem;
+    max-width: 25%;
+}
+
+.p_ofrezco {
+    max-width: 60%;
+}
 
 
 /* =========================
