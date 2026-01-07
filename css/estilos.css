@@ -54,7 +54,7 @@ body a:hover {
     background: linear-gradient(96deg,
             var(--violet-main) 32%,
             var(--green-main) 64%,
-            #008db1 100%);
+            var(--lightblue) 100%);
     font-weight: 400;
 }
 
@@ -95,7 +95,7 @@ body a:hover {
 }
 
 
-.button {
+button {
     font-family: var(--font-primary);
     color: var(--color-white);
     background-color: var(--violet-button);
@@ -105,7 +105,7 @@ body a:hover {
     border-color: var(--violet-button)
 }
 
-.button:hover {
+button:hover {
     /* background-color: var(--violet-active); */
     border-color: var(--color-white);
     /* font-weight: 520; */
@@ -154,7 +154,7 @@ body a:hover {
 
 h1 {
     font-family: var(--font-primary);
-    font-size: 62px;
+    font-size: 54px;
     margin: 2px;
 }
 
@@ -175,6 +175,10 @@ h3 {
     font-weight: 200;
 }
 
+a {
+    text-decoration: none;
+}
+
 .subtitulo {
     text-align: center;
     margin: auto;
@@ -190,6 +194,7 @@ h3 {
     text-align: center;
     padding: 0.7rem 0;
     margin: 0;
+    max-width: 100%;
 }
 
 /* =========================
@@ -273,6 +278,51 @@ h3 {
     max-width: 21rem;
     font-weight: 400;
 }
+
+
+/* SOBRE MI */
+.sobre_mi {
+    background-color: var(--color-white);
+    max-width: 100%;
+    margin: auto;
+    /* max-width: 75%; */
+    padding: 3rem 0 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sobre_mi h1,
+li {
+    text-align: center;
+    margin: 0 32px;
+    color: var(--color-white);
+}
+
+.sobre_mi li {
+    list-style: none;
+}
+
+.sobre_mi .img_sobre_mi {
+    /* width: 500px; */
+    max-width: 30%;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.clearfix {
+    background-color: var(--violet-active);
+    margin-left: 4%;
+    text-align: center;
+}
+
+
 
 /* =========================
    FOOTER

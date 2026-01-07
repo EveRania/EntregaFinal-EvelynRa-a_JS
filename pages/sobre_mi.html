@@ -6,46 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Favicon -->
     <link rel="shortcut icon" href="../img/logo_favicon.ico" type="image/x-icon">
+    <!--  Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&family=Merriweather:wght@400;700&family=Raleway:wght@400;600&family=Inter:wght@400;500;700&family=Nunito:wght@400;600&family=Karla:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/estilos.css" />
+
     <title>Agustin Raña Kinesiologia</title>
 </head>
 
 <body>
-    <header>
-        <div class="navigation-bar" id="navigation-bar">
+    <!-- NAV -->
+    <header class="navigation-bar" id="navigation-bar">
+        <a href="../index.html"> <img class="header_logo" src="../img/logo_sin_fondo.png"
+                alt="Agustin Raña Kinesiología"> </a>
 
-            <a href="../index.html"> <img class="header_logo" src="../img/logo_sin_fondo.png"
-                    alt="Agustin Raña Kinesiologia" width="300rem"></a>
+        <nav class="navlist_der">
+            <a href="../index.html">INICIO</a>
+            <a href="./sobre_mi.html">SOBRE MI</a>
+            <a href="./servicios.html">SERVICIOS</a>
+            <a href="./turnos.html">
+                <button>INSCRIPCIÓN ONLINE</button></a>
 
-            <div class="navlist_der">
-                <a href="../index.html">INICIO</a>
-                <a href="./sobre_mi.html">SOBRE MI</a>
-                <a href="./servicios.html">SERVICIOS</a>
-                <a href="./turnos.html"><button class="button">INSCRIPCIÓN ONLINE</button></a>
-                <a href="#cart" id="carrito">
-                    <div class="contenedor-carrito">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        <div id="productos-carrito" class="count-products">0</div>
-                    </div>
-                </a>
-            </div>
-
-            <a href="javascript:void(0);" id="icon-menu" class="icon">
-                <i class="fa fa-bars"></i>
+            <a href="#cart" id="carrito">
+                <div class="contenedor-carrito">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <div id="productos-carrito" class="count-products">0</div>
+                </div>
             </a>
-        </div>
+        </nav>
+
+        <a href="javascript:void(0);" id="icon-menu" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
     </header>
-    <!-- Main -->
-    <main id="main_sobremi">
-        <section class="introduccion">
-            <!-- foto presentacio -->
-            <img src="../img/sobre_mi.jpg" class="img_sobremi" alt="Agustin Raña Kinesiologo">
+
+    <!-- MAIN -->
+
+    <main>
+        <section class="sobre_mi">
+            <!-- Foto presentación -->
+            <img src="../img/sobre_mi.jpg" class="img_sobre_mi" alt="Agustin Raña Kinesiologo">
             <div class="clearfix col-md-6 float-md-end mb-3 ms-md-3">
                 <!-- info introductoria -->
-                <h1 class="titulo_sobremi">Lic. Agustin Raña</h1>
-                <ul class="formacion">
+                <h1>Lic. Agustin Raña</h1>
+                <ul>
                     <li>Lic. en Kinesiología (mat. 00001/2).
                     </li>
                     <li>Especialista en kinesiología del deporte.</li>
@@ -61,9 +74,9 @@
                 <section class="botones">
                     <a href="#desarrollo"><button>¿QUE TE
                             OFREZCO?</button></a>
-                    <a href="#" target="_blank"><button>FACEBOOK</button>
+                    <a href="#" target="#"><button>FACEBOOK</button>
                     </a>
-                    <a href="#" target="_blank"> <button> INSTAGRAM </button>
+                    <a href="#" target="_blank"><button>INSTAGRAM</button>
                     </a>
                 </section>
             </div>
