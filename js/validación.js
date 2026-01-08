@@ -15,7 +15,7 @@ form.addEventListener("submit", function (e) {
         }
     });
 
-    // Validación email
+    // Validar email
     const email = document.getElementById("email");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -24,7 +24,7 @@ form.addEventListener("submit", function (e) {
         formularioValido = false;
     }
 
-    // Validación teléfono (solo números)
+    // Validar teléfono (solo números)
     const telefono = document.getElementById("telefono");
     const telefonoRegex = /^[0-9]+$/;
 

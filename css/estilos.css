@@ -395,6 +395,33 @@ main .kinesiologia .p_serv {
     display: flex;
 }
 
+
+.error {
+    border: 2px solid red;
+}
+
+
+.campo {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+}
+
+.mensaje-error {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    font-size: 0.75rem;
+    color: red;
+    visibility: hidden;
+}
+
+.error+.mensaje-error {
+    visibility: visible;
+}
+
+
+
 /* =========================
    FOOTER
 ========================= */
