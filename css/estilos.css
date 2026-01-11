@@ -368,7 +368,7 @@ a {
 
 .modal-body {
     padding: 2px 16px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     overflow-y: auto;
 }
 
@@ -384,7 +384,7 @@ a {
 
 .contenedor-producto {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     height: 130;
     background-color: #ffffff;
