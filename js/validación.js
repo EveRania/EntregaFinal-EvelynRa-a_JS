@@ -34,8 +34,15 @@ form.addEventListener("submit", function (e) {
     }
 
     if (formularioValido) {
-        alert("Formulario enviado correctamente ✅");
-        form.submit();
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            icon: 'success',
+            title: 'Formulario enviado correctamente',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true
+        });
     }
 });
 
