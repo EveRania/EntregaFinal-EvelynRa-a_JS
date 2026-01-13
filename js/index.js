@@ -1,5 +1,5 @@
 const url = 'https://raw.githubusercontent.com/EveRania/JSON/main/pilates.json';
-const file = './data/productos.json';
+const file = "./data/productos.json";
 const containerProducts = document.getElementById('container-products');
 const modal = document.getElementById('ventana-modal');
 const carrito = document.getElementById('carrito');

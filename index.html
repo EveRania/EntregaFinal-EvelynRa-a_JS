@@ -29,11 +29,13 @@
 <body>
 
     <!-- NAV -->
-    <header class="navigation-bar" id="navigation-bar">
+    <header class="navigation-bar">
+
         <a href="index.html">
             <img class="header_logo" src="./img/logo_sin_fondo.png" alt="Agustín Raña Kinesiología">
         </a>
 
+        <!-- NAV DESKTOP -->
         <nav class="navlist_der">
             <a href="./index.html">INICIO</a>
             <a href="./pages/sobre_mi.html">SOBRE MI</a>
@@ -44,16 +46,27 @@
 
             <a href="#cart" id="carrito">
                 <div class="contenedor-carrito">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart"></i>
                     <div id="productos-carrito" class="count-products">0</div>
                 </div>
             </a>
         </nav>
 
-        <a href="javascript:void(0);" id="icon-menu" class="icon">
+        <!-- BOTÓN HAMBURGUESA -->
+        <button id="icon-menu" class="icon-menu">
             <i class="fa fa-bars"></i>
-        </a>
+        </button>
+
+        <!-- NAV MOBILE -->
+        <nav class="nav-mobile" id="navMobile">
+            <a href="./index.html">INICIO</a>
+            <a href="./pages/sobre_mi.html">SOBRE MI</a>
+            <a href="./pages/servicios.html">SERVICIOS</a>
+            <a href="./pages/turnos.html">INSCRIPCIÓN ONLINE</a>
+        </nav>
+
     </header>
+
 
     <!-- MAIN -->
     <main>
@@ -157,11 +170,12 @@
     </footer>
 
     <!-- JS -->
+    <script src="./js/responsive.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.11/dist/sweetalert2.all.min.js"></script>
     <script src="./js/carrito.js"></script>
     <script src="./js/productos.js"></script>
     <script src="./js/index.js"></script>
-    <script src="https://kit.fontawesome.com/3086fa92c7.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/3086fa92c7.js" crossorigin="anonymous"></script> -->
 
 </body>
 
