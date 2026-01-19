@@ -53,6 +53,7 @@ body a:hover {
             var(--green-main) 64%,
             var(--lightblue) 100%);
     position: relative;
+    min-height: 50px;
 
 }
 
@@ -84,6 +85,16 @@ body a:hover {
     max-width: 12rem;
 }
 
+.navigation-bar button {
+    font-family: var(--font-primary);
+    color: var(--color-white);
+    background-color: var(--violet-button);
+    padding: 8px;
+    border-radius: var(--radius-round);
+    margin-bottom: 7px;
+    border-color: var(--violet-button);
+    font-size: 14px;
+}
 
 button,
 .boton {
@@ -118,6 +129,11 @@ button:hover,
 
 @media screen and (max-width: 768px) {
 
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .navlist_der {
         display: none;
     }
@@ -134,7 +150,7 @@ button:hover,
         background-color: var(--violet-main);
         display: flex;
         flex-direction: column;
-        padding: 1rem;
+        /* padding: 1rem; */
         max-width: 0;
         transform: translateX(100%);
         transition: max-width 0.3s ease;
@@ -442,7 +458,9 @@ a {
     margin-bottom: 12px;
 }
 
-
+.count-products {
+    padding: 10px;
+}
 
 /* SOBRE MI */
 .sobre_mi {
@@ -619,6 +637,20 @@ main .kinesiologia .p_serv {
 .footer .obras_sociales .img_os {
     max-width: 15rem;
 }
+
+/* Responsive Footer */
+@media screen and (max-width: 768px) {
+    .info_contacto {
+        /* display: none; */
+        font-size: 10px;
+    }
+
+    .obras_sociales {
+        display: none;
+    }
+}
+
+
 
 /* =========================
    MODAL

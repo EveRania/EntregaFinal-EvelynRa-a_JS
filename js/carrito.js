@@ -1,3 +1,7 @@
+const contenedorProductos = document.querySelector('.contenedor-carrito');
+const cantidadProductos = document.querySelector('.count-products');
+let productosCarrito = [];
+
 const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
@@ -7,7 +11,8 @@ const Toast = Swal.mixin({
     timer: 1000,
     timerProgressBar: true,
 });
-
+// 
+// carrito
 class Producto {
     constructor(imagen, nombre, precio, descripcion, id, aclaracion) {
         this.imagen = imagen;
@@ -24,6 +29,13 @@ class Producto {
         this.subtotal = this.precio * this.cantidad;
     }
 }
+
+function refrescarCarrito() {
+    cargarCarritoLocalStorage();
+    mostrarProductosCarrito();
+}
+
+
 
 function ocultarModal() {
     modal.style.display = 'none';
@@ -151,6 +163,7 @@ function agregarAlCarrito(productoAgregar) {
 }
 
 function mostrarProductosCarrito() {
+    if (!containerCart || !totalCarrito) return;
     limpiarHTML();
 
     productosCarrito.forEach((producto) => {
@@ -190,12 +203,16 @@ function mostrarCantidadProductos() {
 }
 
 function calcularTotal() {
+    if (!totalCarrito) return;
+
     let total = productosCarrito.reduce((sumaTotal, producto) => sumaTotal + producto.subtotal, 0);
 
     totalCarrito.innerHTML = `Total a pagar $ ${total}`;
 }
 
 function limpiarHTML() {
+    if (!containerCart) return;
+
     while (containerCart.firstChild) {
         containerCart.removeChild(containerCart.firstChild);
     }
@@ -221,6 +238,7 @@ async function realizarPeticion(datos) {
 
 async function renderizarProductos() {
     const productos = await realizarPeticion(file);
+    if (!productos) return;
     recorrerArray(productos);
 }
 
@@ -242,12 +260,17 @@ function recorrerArray(arregloProductos) {
 }
 
 function showMenu() {
-    let navBar = document.getElementById('navigation-bar');
+    const navBar = document.querySelector('.navigation-bar');
+    if (!navBar) return;
 
-
-    if (navBar.className === 'navigation-bar') {
-        navBar.className += ' responsive';
-    } else {
-        navBar.className = 'navigation-bar';
-    }
+    navBar.classList.toggle('responsive');
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    cargarCarritoLocalStorage();
+    mostrarCantidadProductos();
+});
+
+
